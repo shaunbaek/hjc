@@ -4,9 +4,36 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-matcha-light text-gray-800;
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+:lang(ko) body {
+  font-family: 'Noto Sans KR', 'Inter', sans-serif;
+}
+
+:lang(en) body {
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+}
+
+/* Smooth transitions for language changes */
+h1, h2, h3, p, a, button, div {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-matcha-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-coffee-light rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-coffee;
 }
